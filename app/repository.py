@@ -70,6 +70,7 @@ def insert_events(
             event_id=e["event_id"],
             plan_version=plan_version,
             student_id=e["student_id"],
+            college_id=e.get("college_id"),
             event_type=e["event_type"],
             payload=e["payload"],
         )

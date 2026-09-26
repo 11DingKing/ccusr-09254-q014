@@ -53,6 +53,7 @@ class EventIn(BaseModel):
     event_id: str = Field(..., min_length=1, max_length=128)
     event_type: Literal["checkin", "mentor_confirm", "leave_correction"]
     student_id: str = Field(..., min_length=1, max_length=128)
+    college_id: str | None = Field(None, max_length=128)
     payload: dict[str, Any]
 
 
